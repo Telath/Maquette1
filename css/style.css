@@ -72,9 +72,17 @@ article p:nth-of-type(1){
     margin-bottom: 1rem;
 }
 
+.ctgr{
+    margin: 2rem 2.5rem;
+}
+
 .ctgr h2{
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
+}
+
+.ctgr ul{
+    list-style: none;
 }
 
 .ctgr ul li{
@@ -93,9 +101,9 @@ article p:nth-of-type(1){
 }
 
 .sidebar{
-    background-color: #c7c7c7;
-    width: 18rem;
-    height: 80vh;
+    background-color: #FBFBFB;
+    height: 120vh;
     top: 0;
+    right: 0;
     position: absolute;
 }
