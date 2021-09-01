@@ -14,9 +14,10 @@
 
 body{
     max-width: 1920px;
+    margin: 0 auto;
 }
 
-nav ul{
+nav ul:first-of-type{
     display: flex;
     list-style: none;
 }
@@ -38,21 +39,47 @@ ul li a:hover{
     color: black;
 }
 
+nav ul:nth-of-type(2){
+    position: absolute;
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    flex-direction: row;
+    top:0;
+    right: 0;
+}
+
+nav ul:nth-of-type(2) li{
+    padding: 2rem 1rem;
+}
+
+nav ul:nth-of-type(2) li:last-of-type{
+    margin-right: 6rem;
+}
+
+header img{
+    width: 100%;
+}
+
 main{
     position: relative;
 }
 
 main article{
     max-width: 1024px;
-    margin: 2rem auto;
+    margin: 0 auto;
     display: flex;
     line-height: 2rem;
 }
 
 article img{
+    margin-top: 2rem;
     margin-right: 2rem;
-    width: 308px;
-    height: 203px;
+    object-fit: cover;
+}
+
+article .text{
+    margin-top: 2rem;
 }
 
 article p{
@@ -96,7 +123,7 @@ article p:nth-of-type(1){
     background-color: grey;
     height: 1px;
     width: 15rem;
-    bottom: -50%;
+    bottom: -100%;
     left: 0;
 }
 
@@ -106,4 +133,96 @@ article p:nth-of-type(1){
     top: 0;
     right: 0;
     position: absolute;
+}
+
+@media screen and (max-width:1650px){
+    .sidebar{
+        display: flex;
+        position: unset;
+        justify-content: space-evenly;
+        height: unset;
+    }
+
+    .ctgr:first-of-type ul li:last-of-type:before{
+        display: none;
+    }
+}
+
+@media screen and (max-width:1280px){
+
+    nav ul:nth-of-type(2) li:last-of-type{
+        margin: 0;
+    }
+
+    nav ul li{
+        padding: 2rem 2rem;
+    }
+
+    main{
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:750px){
+
+    *{
+        font-size: 12px;
+    }
+
+    nav ul{
+        justify-content: space-evenly;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li{
+        padding: 1rem;
+    }
+
+    nav ul:nth-of-type(2){
+        position: unset;
+        justify-content: center;
+    }
+
+    nav ul:nth-of-type(2) li{
+        padding: 0 2rem;
+    }
+
+    main{
+        max-width: 90%;
+    }
+
+    article{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    article img{
+        margin-top: 4rem;
+        margin-right: 0;
+    }
+
+    article .text p:first-of-type{
+        position: absolute;
+        top: 25px;
+        right: 0;
+    }
+
+    article .text p:nth-of-type(2){
+        line-height: 20px;
+    }
+
+    article .text h2{
+        position: absolute;
+        top: 5px;
+        left: 0;
+    }
+
+    .sidebar{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
 }
