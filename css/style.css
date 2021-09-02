@@ -22,13 +22,14 @@ nav ul:first-of-type{
     list-style: none;
 }
 
-nav ul li{
+nav ul:first-of-type li a{
     padding: 2rem 6rem;
 }
 
 ul li a{
     color: #9F9F9F;
     text-decoration: none;
+    display: block;
 }
 
 ul li .active{
@@ -49,7 +50,7 @@ nav ul:nth-of-type(2){
     right: 0;
 }
 
-nav ul:nth-of-type(2) li{
+nav ul:nth-of-type(2) li a{
     padding: 2rem 1rem;
 }
 
@@ -154,7 +155,7 @@ article p:nth-of-type(1){
         margin: 0;
     }
 
-    nav ul li{
+    nav ul:first-of-type li a{
         padding: 2rem 2rem;
     }
 
@@ -164,29 +165,10 @@ article p:nth-of-type(1){
     }
 }
 
-@media screen and (max-width:750px){
+@media screen and (max-width:880px){
 
     *{
         font-size: 12px;
-    }
-
-    nav ul{
-        justify-content: space-evenly;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul li{
-        padding: 1rem;
-    }
-
-    nav ul:nth-of-type(2){
-        position: unset;
-        justify-content: center;
-    }
-
-    nav ul:nth-of-type(2) li{
-        padding: 0 2rem;
     }
 
     main{
@@ -202,6 +184,7 @@ article p:nth-of-type(1){
     article img{
         margin-top: 4rem;
         margin-right: 0;
+        height: 150px;
     }
 
     article .text p:first-of-type{
@@ -225,4 +208,26 @@ article p:nth-of-type(1){
         flex-direction: column;
         text-align: center;
     }
+}
+
+@media screen and (max-width:480px){
+nav ul{
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+}
+
+nav ul:first-of-type li a{
+    padding: 1rem;
+}
+
+nav ul:nth-of-type(2){
+    position: unset;
+    justify-content: center;
+}
+
+
+nav ul:nth-of-type(2) li a{
+    padding: 1rem 2rem;
+}
 }
